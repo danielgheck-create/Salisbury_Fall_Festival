@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+
+:root {
+  --menu-red:#ed302d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #FFF;
+  color:#333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style:none;
+}
+
+a {
+  color:#333;
+  text-decoration:none;
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height:1.2;
+}
+
+p {
+  margin:10px 0;
+}
+
+img {
+  width:100%;
+}
+
+/* Nav Bar */
+
+  /* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 30px 20px;
+  text-decoration: none;
+  /* align-items: center;
+  justify-content: center; */
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: var(--menu-red);
+  color: #FFF;
+}
+ 
+.current-page {
+  background-color: #ed302d !important;
+  color: #FFF !important;
+  padding: 30px 20px !important;
+}
+
+.logo {
+  /* background-color:#ed302d; */
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 5px;
+  margin-top: 0px;
+  text-align: center;
+  height:100%;
+  padding-top: 10px;
+}
+
+.upper-icon {
+  width:50px
+}
+
+
+.navbar ul {
+  display: flex;
+  height: 70px;
+  /* background-color: #F00; */
+}
+
+.navbar li {
+  padding-top: 20px;
+}
+
+/* Header */
+
+.hero {
+  background: url('../images/home/autumn-leaves-HERO.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #FFF;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* because flex direction is vertical now, the cross axis is horizontal so this centers it horizontally  */
+  justify-content: center;
+  text-align:center;   
+  height:100%;
+  padding: 0px 20px;
+}
+
+.hero .content h1 {
+  font-size: 100px;
+  font-weight: 100;
+  font-family: 'Mountains of Christmas';
+  text-shadow: 2px 10px 8px #000000 !important;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero::before {
+  content:'';
+  position: absolute; /* works because .hero (parent class) is relative */
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+
+.hero * {
+  z-index: 10;
+}
+
+.cases img:hover {
+  opacity:0.7;
+}
+
+/* Section Header */
+
+.section-header {
+
+}
+
+.section-header-container {
+  display: flex;
+  width:100%;
+}
+
+
+.section-header-container img {
+  width: 250px;
+  flex: 1;
+  object-fit: cover;
+}
+
+.section-header-container div {
+  flex:2;
+  /* border:solid 3px red; */
+}
+
+.section-header-container .header-text h3 {
+  padding-top: 20px;
+}
+
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 850px) {
+  .navbar {   
+    flex-direction: column;
+    font-size: 1.3rem;
+  }
+  .content {
+    margin: -250px auto;
+  }
+  .content h1 {
+    font-size: 0.8rem;
+  }
+
+  .image-removed {
+    display: none;
+  }
+
+  .flex-columns .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%
+  }
+
+}
+
+/* OLD NAV STYLES
+  display: flex;
+  align-items:center; 
+  justify-content: space-between; 
+  background-color:#333;
+  color:#FFF;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+}
+  .navbar a {  OLD STYLES
+  color:#FFF;
+  padding: 10px 20px;
+  /* margin: 0 5px; 
+
+  .navbar a:hover{
+  border-bottom: #f0a575 2px solid;
+  /* background-color: crimson; 
+}*/
+
+
+
